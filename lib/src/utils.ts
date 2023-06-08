@@ -11,7 +11,8 @@ export function normalizeString(text: string) {
         .replace(/\s+/g, "_") // Replace spaces with _
         .replace(/-+/g, "_") // Replace - with _
         .replace(/[^\w\-]+/g, "_") // Remove all non-word chars
-        .replace(/--+/g, "-"); // Replace multiple - with single -
+        .replace(/--+/g, "-") // Replace multiple - with single -
+        .replace(/~1/g, "/");
 }
 
 export const wrapWithQuotesIfNeeded = (str: string) => {
